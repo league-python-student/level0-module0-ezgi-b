@@ -13,9 +13,9 @@ def screen_clicked(x, y):
     print('You pressed: x=' + str(x) + ', y=' + str(y))
     
     # 6. Call the turtle .penup() method
-    
+    banana.penup()
     # 7. Move the turtle to a new location using .goto(x, y)
-
+    banana.goto(x, y)
 
 def turtle_clicked(x, y):
     print('turtle clicked!')
@@ -27,24 +27,26 @@ def turtle_clicked(x, y):
         # 10. Use the .color() method and getRandomColor() function to change
         # the color of the turtle,
         # myTurtle.color(get_random_color())
-
+    for x in range(3):
+        banana.right(360)
+        banana.color(get_random_color())
 
 if __name__ == '__main__':
     window = turtle.Screen()
     window.setup(width=0.75, height=0.8, startx=0, starty=0)
     
     # 1. Make a new turtle
-    turtle = turtle.Turtle()
+    banana = turtle.Turtle()
     # 2. Make your turtle's shape 'turtle', .shape('turtle')
-    turtle.shape('turtle')
+    banana.shape('turtle')
     # 3. Set your turtle's color using .color('green') and .pencolor('blue')
-    turtle.color('green')
-    turtle.pencolor('blue')
+    banana.color('green')
+    banana.pencolor('blue')
     # 4. Set and new width, length, and outline of our turtle
-    turtle.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
+    banana.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
 
     # 5. Uncomment the following line and replace 'my_turtle' with your turtle
-    # my_turtle.onclick(turtle_clicked)
+    banana.onclick(turtle_clicked)
 
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screen_clicked)

@@ -18,20 +18,20 @@ if __name__ == '__main__':
     window.bgcolor('black')
     window.setup(width=0.75, height=0.9, startx=0, starty=0)
     
-    colors = ('red', 'blue', 'green', 'yellow', 'orange')
+    colors = ('red', 'blue', 'purple', 'red', 'white')
     
     # Make a new turtle
-    
+    fire = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    fire.shape('turtle')
     # Set the turtle speed to max (0)
-    
+    fire.speed(0)
     # Set the turtle width to 1
-    
+    fire.pensize(1)
     # Create a variable to hold the number of sides in a pentagon
-    
+    sides = 5
     # Create a variable to be the angle of 360 divided by the sides variable
-    
+    angle = 360/5
     # Use a for loop to repeat ALL the following lines of code 360 times. 
         
         # If the loop variable (i) is equal to 100, set the turtle width to 2
@@ -44,9 +44,17 @@ if __name__ == '__main__':
         # Move the turtle forward by the loop variable, *hint .forward(i)
         
         # Turn the turtle to the right by the angle variable + 1
+    for x in range(360):
+        if x == 100:
+            fire.pensize(2)
+        if x == 200:
+            fire.pensize(2)
+        fire.pencolor(get_next_color(x))
+        fire.forward(x%30)
+        fire.right(angle + 1)
 
     # Hide your turtle so you can see the pattern.
-        
+    fire.hideturtle()
     # Check the pattern against the picture in the recipe. If it matches, you are done!
     
     # Variations:
