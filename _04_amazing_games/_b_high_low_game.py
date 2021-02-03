@@ -16,7 +16,7 @@ if __name__ == '__main__':
         # 4. Ask the user for a guess using a pop-up window, and save their response
         guess = simpledialog.askinteger(title="Question", prompt="Guess a number 1-100.")
         if guess==random_num:
-            messagebox.showinfo(title="!!!!!", prompt='You are correct! You win!')
+            messagebox.showinfo(title="!!!!!", message='You are correct! You win!')
             sys.exit(0)
         elif guess > random_num:
             messagebox.showerror(title="wrong.", message='Too high!')
@@ -31,6 +31,6 @@ if __name__ == '__main__':
             # 10. Tell them it's too low
 
     #11. Outside of the loop, tell the user they lost
-    messagebox.showerror(title='Loser', prompt="You lost")
+    messagebox.showerror(title='Loser', message="You lost")
 
     window.mainloop()
